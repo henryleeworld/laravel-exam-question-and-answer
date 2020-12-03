@@ -1,16 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use \DateTimeInterface;
 
-class Exam extends Model
+class Permission extends Model
 {
     use SoftDeletes;
 
-    public $table = 'exams';
+    public $table = 'permissions';
 
     protected $dates = [
         'created_at',
@@ -19,8 +19,7 @@ class Exam extends Model
     ];
 
     protected $fillable = [
-        'name',
-        'questions_amount',
+        'title',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -29,10 +28,5 @@ class Exam extends Model
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');
-    }
-
-    public function categories()
-    {
-        return $this->belongsToMany(Category::class);
     }
 }

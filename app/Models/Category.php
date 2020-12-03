@@ -1,16 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use \DateTimeInterface;
 
-class QuestionOption extends Model
+class Category extends Model
 {
     use SoftDeletes;
 
-    public $table = 'question_options';
+    public $table = 'categories';
 
     protected $dates = [
         'created_at',
@@ -19,9 +19,7 @@ class QuestionOption extends Model
     ];
 
     protected $fillable = [
-        'question_id',
-        'option_text',
-        'is_correct',
+        'name',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -30,10 +28,5 @@ class QuestionOption extends Model
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');
-    }
-
-    public function question()
-    {
-        return $this->belongsTo(Question::class, 'question_id');
     }
 }

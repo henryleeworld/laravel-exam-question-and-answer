@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Category;
-use App\Exam;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyExamRequest;
 use App\Http\Requests\StoreExamRequest;
 use App\Http\Requests\UpdateExamRequest;
+use App\Models\Category;
+use App\Models\Exam;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;

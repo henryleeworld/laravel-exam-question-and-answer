@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreQuestionOptionRequest;
 use App\Http\Requests\UpdateQuestionOptionRequest;
 use App\Http\Resources\Admin\QuestionOptionResource;
-use App\QuestionOption;
+use App\Models\QuestionOption;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;

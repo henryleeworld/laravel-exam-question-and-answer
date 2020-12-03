@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\QuestionOption;
+use App\Models\QuestionOption;
 use Gate;
 use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;

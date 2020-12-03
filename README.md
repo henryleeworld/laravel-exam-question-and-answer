@@ -1,6 +1,6 @@
-# Laravel 7 測驗問題和答案
+# Laravel 8 測驗問題和答案
 
-測驗題目及建立題庫，能有效評估學習成效，用來測試是否具備應有的相關能力，進而落實終身學習的教育理念。Laravel 7 測驗問題和答案主要是用的 [QuickAdminPanel](https://quickadminpanel.com) 生成的，除了一些定制代碼，可依需求彈性改造的工具。
+測驗題目及建立題庫，能有效評估學習成效，用來測試是否具備應有的相關能力，進而落實終身學習的教育理念。Laravel 8 測驗問題和答案主要是用的 [QuickAdminPanel](https://quickadminpanel.com) 生成的，除了一些定制代碼，可依需求彈性改造的工具。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
@@ -12,7 +12,7 @@ $ git clone
 ```sh
 $ composer install
 ```
-- 產⽣ Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
+- 產生 Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
 ```sh
 $ php artisan key:generate
 ```
@@ -24,18 +24,18 @@ $ php artisan migrate --seed
 ```sh
 $ npm install
 ```
-- 執行 __npm__ 指令的 __run__ 來執行開啟開發環境服務。
+- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
 ```sh
-$ npm run dev
+$ npm install && npm run dev
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以經由 `/login` 來進行登入，預社的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
+- 你可以經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/vexMiyZ.png)
+![](https://i.imgur.com/DqykbjG.png)
 > 藉由問題的建立，可以在任何時間、任何地方，想測驗就測驗，簡便又迅速
 
-![](https://i.imgur.com/VFiynIU.png)
+![](https://i.imgur.com/DtebEXy.png)
 > 新增每個題目及答案，並依需要寫上詳解
