@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddRelationshipFieldsToQuestionOptionsTable extends Migration
+return new class extends Migration
 {
     public function up()
     {
@@ -13,4 +13,4 @@ class AddRelationshipFieldsToQuestionOptionsTable extends Migration
             $table->foreign('question_id', 'question_fk_1537596')->references('id')->on('questions');
         });
     }
-}
+};
