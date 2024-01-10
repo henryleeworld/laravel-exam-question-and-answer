@@ -9,7 +9,7 @@
     <div class="card-body">
         <form method="POST" action="{{ route("admin.exams.store") }}" enctype="multipart/form-data">
             @csrf
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="name">{{ trans('cruds.exam.fields.name') }}</label>
                 <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', '') }}" required>
                 @if($errors->has('name'))
@@ -19,7 +19,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.exam.fields.name_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="questions_amount">{{ trans('cruds.exam.fields.questions_amount') }}</label>
                 <input class="form-control {{ $errors->has('questions_amount') ? 'is-invalid' : '' }}" type="number" name="questions_amount" id="questions_amount" value="{{ old('questions_amount', '') }}" step="1" required>
                 @if($errors->has('questions_amount'))
@@ -29,7 +29,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.exam.fields.questions_amount_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="categories">{{ trans('cruds.exam.fields.categories') }}</label>
                 <div style="padding-bottom: 4px">
                     <span class="btn btn-info btn-xs select-all" style="border-radius: 0">{{ trans('global.select_all') }}</span>
@@ -47,7 +47,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.exam.fields.categories_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-0">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>

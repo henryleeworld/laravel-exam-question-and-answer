@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('question_options', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('option_text');
             $table->boolean('is_correct')->default(0)->nullable();
             $table->timestamps();

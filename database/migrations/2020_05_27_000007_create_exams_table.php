@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('exams', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name');
             $table->integer('questions_amount');
             $table->timestamps();

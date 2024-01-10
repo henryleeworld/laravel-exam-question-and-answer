@@ -9,8 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('questions', function (Blueprint $table) {
-            $table->unsignedInteger('category_id');
-            $table->foreign('category_id', 'category_fk_1537578')->references('id')->on('categories');
+            $table->foreignId('category_id')->constrained();
         });
     }
 };

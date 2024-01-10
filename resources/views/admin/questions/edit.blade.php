@@ -10,7 +10,7 @@
         <form method="POST" action="{{ route("admin.questions.update", [$question->id]) }}" enctype="multipart/form-data">
             @method('PUT')
             @csrf
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="category_id">{{ trans('cruds.question.fields.category') }}</label>
                 <select class="form-control select2 {{ $errors->has('category') ? 'is-invalid' : '' }}" name="category_id" id="category_id" required>
                     @foreach($categories as $id => $category)
@@ -24,7 +24,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.question.fields.category_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="question">{{ trans('cruds.question.fields.question') }}</label>
                 <input class="form-control {{ $errors->has('question') ? 'is-invalid' : '' }}" type="text" name="question" id="question" value="{{ old('question', $question->question) }}" required>
                 @if($errors->has('question'))
@@ -34,7 +34,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.question.fields.question_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label for="points">{{ trans('cruds.question.fields.points') }}</label>
                 <input class="form-control {{ $errors->has('points') ? 'is-invalid' : '' }}" type="number" name="points" id="points" value="{{ old('points', $question->points) }}" step="1">
                 @if($errors->has('points'))
@@ -44,7 +44,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.question.fields.points_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label for="answer_explanation">{{ trans('cruds.question.fields.answer_explanation') }}</label>
                 <input class="form-control {{ $errors->has('answer_explanation') ? 'is-invalid' : '' }}" type="text" name="answer_explanation" id="answer_explanation" value="{{ old('answer_explanation', $question->answer_explanation) }}">
                 @if($errors->has('answer_explanation'))
@@ -54,7 +54,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.question.fields.answer_explanation_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-0">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>
